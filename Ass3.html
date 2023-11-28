@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUMPROS.JR.ST5</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="icon" href="setec logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    :root{
+    --defult:#0c5b47;
+    --WD: 1200px;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    }
+    *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: serif;
+    }
+    /* MEnu Bar */
+    .head{
+        width: 1200px;
+        top: 0;
+        position:fixed;
+        margin: auto;
+        display: flex;
+        width:var(--WD);
+        background-color:#d4ddd4;
+        height: 40px;
+        margin-bottom: 0px;
+        box-shadow: 1px 1px 5px black;
+    }.head .icon{
+        width: 700px;
+    }
+    
+    .head .icon ul{
+        display: flex;
+        text-decoration: none;
+    }.head .icon ul li{
+        padding: 0 10px;
+    }.head .icon ul li i{
+        margin-top: 10px;
+        color: black;
+        word-spacing: 2px;
+    }.head .rigth{
+        display: flex;
+        width: 500px;
+        margin-top: 10px;
+        float: right;
+        padding-left: 200px;
+    }.head .rigth p{
+        margin-top: -5px;
+        margin-right: 10px;
+    
+    }
+    .content{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        margin-bottom: -10px;
+    }.content .imgage{
+        width: 600px;
+    }.content .imgage img{
+        width: 600px;
+    }.content .info{
+        margin-left: 40px;
+        margin-top: 70px;
+        padding-top: 100px;
+        width: 550px;
+    }.content .info h1{
+        font-size: 50px;
+        color: var(--defult);
+    }.content .info h3{
+        font-size: 20px;
+        color: var(--defult);
+    }.content .info .icon{
+        margin-top: 30px;
+        width: 600px;
+        display: flex;
+    }.content .info .apple{
+        width: 300px;
+    }.content .info .cart{
+        width: 300px;
+    }.content .info i{
+        font-size: 70px;
+        color: var(--defult);
+    }.con-bar{
+        width: var(--WD);
+        /* position:fixed; */
+        margin: auto;
+        border-color: black;
+    }.con-table{
+        margin-top: 40px;
+    }.con-table table{
+        margin: auto
+    }
+    /* Frirs rigth */
+    .info{
+        color: black;
+        margin-left: 40px;
+        margin-top: -50px;
+        padding-top: 100px;
+        width: 550px;
+    }.info h1{
+        font-size: 50px;
+        color: var(--defult);
+    }.info h3{
+        font-size: 20px;
+        color: var(--defult);
+    }.info .icon{
+        margin-top: 30px;
+        width: 600px;
+        display: flex;
+    }.info .apple{
+        width: 300px;
+        border-right: 1px solid black;
+        padding-left: 10px;
+    }.info .cart{
+        padding-left: 30px;
+        width: 300px;
+        color: black;
+    }.info i{
+        font-size: 85px;
+        color: var(--defult);
+        margin-left: 60px;
+    }.con-table{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+  /*optionplower  */
+  .flower-opt{
+       padding-top: 80px;
+       margin: 2px;
+       width: 275px;
+       height: 275px;
+      /* border-color: black; */
+      background-color: #d4ddd4;
+    }.flower-opt .btn{
+        border: 1px solid #00000022;
+        padding: 5px 10px;
+        margin-left: 90px;
+        color: #0c5b47;
+    }button:hover{
+        transition: all .9s ease-in-out;
+        background-color:transparent;
+    }.Information{
+        width: 1200px;
+        margin: auto;
+        top: 0;
+        position: sticky;
+    }.Information marquee{
+        box-shadow: 1px 1px 1px black;
+        margin-top: 42px;
+        background-color: rgba(255, 255, 255, 0.3);
+        font-family: "Khmer OS Battambang";
+        color: rgb(0, 0, 0);
+        padding: 2px;
+
+    }.iconinfo{
+        margin-top: 80px;
+        width:  275px;
+        display: flex;
+    }.iconinfo .info1{
+        width: 150px;
+        display: flex;
+    }.iconinfo .info1 i{
+        margin-top: 15px;
+        font-size: 50px;
+        color: #0c5b47;
+    }.info3 a{
+        margin: 10px;
+        color: #0c5b47;
+    }.info3 p{
+        color: #0c5b47;
+    }.mdbox{
+        margin: 0;
+        margin: auto;
+        width: 550px;
+        height: 200px;
+        background-color: #e6f9e9;
+        /* border: 1px solid black; */
+        padding: 5px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        box-shadow: 1px 2px 3px black;
+    }.mdbox{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }.boxinfo{
+        margin: auto;
+        width: 550px;
+        background-color: #0c5b47;
+        display: flex;
+        margin-top: 20px;
+    }.boxinfo .boxinfo1{
+        width: 183px;
+        background-color: rgb(204, 231, 231);
+        text-align: center;
+        padding: 5px;
+        
+    }.boxinfo .boxinfo1 p{
+        text-align: left;
+        margin-left: 10px;
+    }.boxinfo .boxinfo2{
+        width: 183px;
+        background-color: rgb(255, 195, 195);
+        text-align: center;
+        padding: 5px;
+        
+    }
+    .boxinfo .boxinfo3{
+        width: 183px;
+        background-color: rgb(104, 123, 186);
+        text-align: center;
+        padding: 5px;
+    }.headicon{
+        margin: auto;
+        align-items: center;
+        background-color: #a8fde2;
+        display: flex;
+        font-size: 20px;
+        margin-top: 30px;
+        height: 220px;
+        color: var(--defult);
+    }.headicon .btnsearch{
+        width: 600px;
+        /* background-color: rgb(255, 255, 255); */
+        display: flex;
+        flex-direction: column;
+        justify-content:    center;
+        align-items: center;
+    }.headicon .btnsearch input{
+        border: none;
+        border-bottom: 1px solid #0c5b47;
+        background-color: transparent;
+    }.headicon .btnsearch input[search]:focus{
+        border: none;
+        border-bottom: 1px solid #0c5b47;
+    }
+    
+    .headicon .btnsearch button{
+        padding: 0px 5px;
+        border: none;
+        background-color: #93d7c6;
+        color:#0c5b47;
+    }.con-social{
+        float: right;
+        width: 550px;
+        margin-left: 15px;
+        background-color: #fff;
+        height: 220px;
+        text-align: center;
+        border-left: 1px solid black;
+    }
+    .socail{
+        text-align: center;
+        display: flex;
+        justify-content: end;
+    }
+    .socail .texticon{
+        width: 275px;
+        align-items: end;
+    }table{
+        border: none;
+    }
+</style> 
+
+<body>
+    <div class="con-bar">
+        <div class="head">
+            <div class="icon">
+                <ul type="none">
+                    <li><i class="fa-brands fa-facebook"></i> Sum Pros.Jr</li>
+                    <li><i class="fa-solid fa-envelope"></i> psm19@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Takeo Province</li>
+                    <li><i class="fa-regular fa-heart"></i> (+855) 96 455 5669</li>
+                </ul>
+            </div>
+            <div class="rigth">
+                <p>Special prices for orders over $150</p>
+                <i style="padding:0 15px;" class="fa-solid fa-circle-user"></i>
+                <i  class="fa-solid fa-bars"></i>
+            </div>
+        </div> 
+    </div>
+    <div class="Information">
+        <marquee behavior="scroll" direction="left">នៅ <span style="font-family: Khmer Mool1;">វិទ្យាស្ថានស៊ីតិក</span>
+        មានកម្មវិធីសិក្សាបង្រៀនដលនិស្សិតឲ្យមានជំនាញដែលក្រុមហ៊ុនសព្វថ្ងៃកំពុងចង់បាន។
+        ក្រៅពីរៀបចំកម្មវិធីដោយផ្តោតសំខាន់លើជំនាញ វិទ្យាស្ថាន។</marquee>
+    </div>
+
+     <div class="con-table">
+        <table border="none" width="1200" align="center"="1px" rules="none">
+            <tr>
+                <td width="50"></td>
+                <td width="270" colspan="2"><img src="HW3/Headimg1.png" alt=""></td>
+                <td width="270" colspan="2">
+                    <div class="info">
+                        <h1>We Build This Simple Website By</h1>
+                        <h3>The HyperText Markup Language or HTML is the standard markup language for documents designed.It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+                        browser.</h3>
+                        <div class="icon">
+                            <div class="apple">
+                                <i style="color: rgb(16, 98, 52);" class="fa-brands fa-html5"></i>
+                                <h2>HTML5 Index</h2>
+                                <h4>Structure Plane</h4>
+                            </div>
+                            <div class="cart">
+                                <i style="color: rgb(16, 98, 52);" class="fa-brands fa-css3-alt"></i>
+                                <div style="color: var(--defult);">
+                                    <h2 style="color:rgb(16, 98, 52);">CSS3 Style Sheet</h2>
+                                    <h4 style="color: rgb(16, 98, 52);">Colorfull Structure</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <hr>
+                        </div>
+                    </div>
+                </td>
+                <td width="50"></td>
+            </tr>
+             <tr> 
+                        <td width="50"></td>
+                        <td width="275"><div class="flower-opt">
+                            <h2 align="center">Fresh bouquets</h2>
+                            <h4 align="center">summer sale under 40%</h4>
+                            <button class="btn">Deliver Now</button>
+                        </div></td>
+                        <td style="padding: 10px;" width="275"><img src="HW3/New/2.png" width="275" alt=""></td>
+                        <td style="padding: 10px;" width="275"><img src="HW3/New/3.png" width="275" alt=""></td>
+                        <td style="padding: 5px;" width="275"><img src="HW3/New/5.png" width="275" alt=""></td>
+                        <td width="50"></td>
+            </tr>
+            <tr>
+                <td width="50"></td>
+                <td width="275"><img src="HW3/New/7.png" width="275" alt=""></td>
+                <td style="padding: 10px;" width="275"><img src="HW3/New/6.png" width="275" alt=""></td>
+                <td style="padding: 10px;" width="275">
+                    <div class="flower-opt">
+                <h2 align="center">Gifts for orders over 40$</h2>
+                <h4 align="center">only for you</h4>
+                <button class="btn">See More</button>
+            </div>
+                </td>
+                <td style="padding: 5px;" width="275"><img src="HW3/New/4.png" width="275" alt=""></td>
+                <td width="50"></td>
+            </tr>
+        <tr>
+            <td width="50"></td>
+            <td width="275"></td>
+            <td style="padding: 80px 10px;" width="275"><img src="HW3/New/1.png"width="270" alt=""></td>
+            <td style="padding: 80px 10px;" width="275"><img src="HW3/11.png" width="270" alt=""></td>
+
+            <td width="275"></td>
+            <td width="50"></td>
+        </tr>
+        <tr>
+            <td width="50"></td>
+            <td width="275"></td>
+            <td width="275"><img src="HW3/New/9.png"width="275"alt=""></td>
+            <td width="275"><img src="HW3/New/10.png" width="275" alt=""></td>
+            <td width="275"></td>
+            <td width="50"r</td>
+            
+        </tr>
+        <tr>
+            <td width="50"></td>
+            <td width="275"></td>
+            <td width="275">
+                <hr>
+                <div class="iconinfo">
+                    <!-- info1 -->
+                    <div class="info1"> 
+                        <div class="info2">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="info3">
+                            <p>Online Order</p>
+                            <a href="#">More Info</a>
+                            <hr width="70">
+                        </div>
+                    </div>
+                    <!-- info2 -->
+                    <div class="info1">
+                        <div class="info2">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="info3">
+                            <p>Delivery </p>
+                            <a href="#">More Info</a>
+                            <hr width="70">
+                        </div>
+                    </div>  
+                </div>
+            </td>
+            <td width="275">
+                <hr>
+                <div class="iconinfo">
+                    <!-- info1 -->
+                    <div class="info1">
+                        <div class="info2">
+                        <i class="fa-brands fa-square-instagram"></i>
+                        </div>
+                        <div class="info3">
+                            <p>Freshness</p>
+                            <a href="#">More Info</a>
+                            <hr width="70">
+                        </div>
+                    </div>
+                    <!-- info2 -->
+                    <div class="info1">
+                        <div class="info2">
+                            <i class="fa-brands fa-square-twitter"></i>
+                        </div>
+                        <div class="info3">
+                            <p>Made by</p>
+                            <a href="#">More Info</a>
+                            <hr width="70">
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td width="275"></td>
+            <td width="50"></td>
+        </tr>
+        <tr>
+            <td width="50"></td>
+            <td width="275" colspan="4">
+                <div class="mdbox">
+                    <p>Every flower is a soul blossoming in nature. A flower does not think of competing with
+                         the flower next to it. It just
+                    blooms.<a href="#">info More</a></p>
+                </div>
+            </td>
+            <td width="50"></td>
+        </tr>
+        <tr>
+            <td width="50"></td>
+            <td width="1100" colspan="4">
+                <div class="boxinfo">
+                    <div class="boxinfo1">
+                    <h3>Toronto</h3>
+                    <p>Say Hello</p>
+                    <p>Email@pros.com</p>
+                    <p>Phone</p>
+                    <p>+855 964554669</p>
+                    </div>
+
+                    <div class="boxinfo2">
+                        <h3>Paris</h3>
+                        <p>Say Hello</p>
+                        <p>Email@pros.com</p>
+                        <p>Phone</p>
+                        <p>+855 964554669</p>
+                    </div>
+
+                    <div class="boxinfo3">
+                        <h3>Bacelona</h3>
+                        <p>Say Hello</p>
+                        <p>Email@pros.com</p>
+                        <p>Phone</p>
+                        <p>+855 964554669</p>
+                    </div>
+                </div>
+                
+            </td>
+            <td width="50"></td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td width="50"></td>
+            <td width="1100" colspan="4">
+                <div class="headicon">
+                    <div class="btnsearch">
+                        <h3>Subcribe To our newslater</h3>
+                        <div>
+                            <input type="search" placeholder="Your Email">
+                            <button>send</button>
+                        </div>
+                    </div>
+                    <div class="con-social">
+                        <h3>Connect With Us</h3>
+                        <hr width="200px" style="margin: auto;">
+                        <div class="socail">
+                            <div class="texticon">
+                                <i  style="font-size: 40px;cursor: pointer;" class="fa-brands fa-facebook"></i>
+                                <p>Facebook</p>
+                            </div>
+                            <div class="texticon">
+                                <i style="font-size: 40px; cursor: pointer;" class="fa-brands fa-square-instagram"></i>
+                                <p>Instagram</p>
+                            </div>
+                        </div>
+                        <!-- Icon2 -->
+                        <div class="socail">
+                            <div class="texticon">
+                                <i style="font-size: 40px;cursor: pointer;" class="fa-brands fa-twitter"></i>
+                                <p>Twitter</p>
+                            </div>
+                            <div class="texticon">
+                                <i style="font-size: 40px;cursor: pointer;" class="fa-brands fa-youtube"></i>
+                                <p>Youtube</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td width="50"></td>
+        </tr>
+        </table>
+    </div>
+
+<tr>
+    <td width="50"></td>
+    <td width="275"></td>
+    <td width="275"></td>
+    <td width="275"></td>
+    <td width="275"></td>
+    <td width="50"></td>
+</tr>
+</body>
+</html>
